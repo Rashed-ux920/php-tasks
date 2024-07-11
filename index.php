@@ -43,17 +43,60 @@
         <br>
         <br>
         <button type="submit">send</button>
-    </form>
-    </section>
-    <footer>
+        <br>
+        <br>
+
+        <h1>Calculator</h1>
+
+        <p>to creat a basic calculator with php</p>
+        <form action="index.php"  method="post">
+            <input type="number" name="number1" id="number1" placeholder="enter a number">
+            <select name="opperation" id="opperation" >
+                <option value="1">+</option>
+                <option value="2">-</option>
+                <option value="3">*</option>
+                <option value="4">/</option>
+            </select>
+            <input type="number" name="number2" id="number2" placeholder="enter a number">
+
+            <button type="submit">calc</button>
+        </form>
+        <h2>
+            <?php
+                   // task 3
+     $result = 0;
+     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            
+            $value1     = $_POST["number1"];
+            $value2     = $_POST["number2"];
+            $opperation = $_POST["opperation"];
+            switch ($opperation) {
+             case '1':
+                 # code...
+                 $result =  $value1 + $value2;
+                 echo $result;
+                 break;
+             case '2':
+                 $result = $value1 - $value2;
+                 echo $result;
+                 break;
+             case '3':
+                 $result = $value1 * $value2;
+                 echo $result;
+                 break;
+             case '4':
+                 $result = $value1 / $value2;
+                 echo $result;
+                 break;
+             default:
+             echo $result;
+                 break;
+            }
+            echo $result;
+             }        
+            ?>
+        </h2>
         <?php
-            include "php/footer.php"
-        ?>
-    </footer>
-    
-
-
-    <?php
     // file one task one
     $fruits = array("banana","strobary","tomato");
 
@@ -117,9 +160,8 @@
         echo $value;
         echo "</pre>";
     }
-
-
-    // // file three
+    // file three
+    // task 2
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $url = $_POST['url'];
 
@@ -132,14 +174,23 @@
         header("Location: " . $url);
         exit();
     }
+ 
+    
+
+
+
+
+
     ?>
 
 
-
-
- 
-
-
+    </form>
+    </section>
+    <footer>
+        <?php
+            include "php/footer.php"
+        ?>
+    </footer>
 </body>
 
 </html>
