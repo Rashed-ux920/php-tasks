@@ -1,0 +1,68 @@
+:root{
+    --hbg-:rgb(255, 242, 0);
+    --bg-colora: rgb(54, 52, 52);
+    --text-colora: color-mix(in srgb, yellow 70%, hsl(46, 98%, 51%) 30%);
+    --font-weightn: 600;
+    --tcolor-ofbtn:yellow;
+    --border-radiusa: 20px;
+    --border-radiuslogo: 30px;
+    --time-in-second: 0.5s;
+    --transform-scale: 1.1;
+    --visibilityh: hidden;
+    --visibilityv: visible;
+    --cardicolor: black;
+    --fontwightforcard: 500;
+    
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 90px;
+    background: rgb(64, 63, 63);
+    outline: hidden;
+}
+.contant{
+    text-align: center;
+    color: var(--tcolor-ofbtn);
+    margin-top: 10px;
+}
+.card{
+    margin-top: 6px;
+    background: var(--text-colora);
+    color: black;
+    border-top-left-radius: var(--border-radiusa);
+    border-bottom-right-radius: var(--border-radiusa);
+    padding: 0 20px;
+}
+.card a{
+    color: var(--cardicolor);
+    text-decoration: none;
+}
+.justify{
+    display: flex;
+    justify-content: space-around;
+    font-weight: var(--fontwightforcard);
+    font-size: 1rem;
+}
+.justify span{
+    margin-left: 8px;
+}
+@media(max-width:720px){
+    .contant{
+        text-align: center;
+    }
+    .margin{
+        width: 100%;
+        margin-right: 20rem;
+    }
+    .justify{
+        font-size: 0.7rem;
+    }
+    .justify a{
+        display: block;
+    }
+
+
+}
